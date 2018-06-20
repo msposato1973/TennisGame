@@ -1,33 +1,40 @@
 package it.tennis.model;
 
+import java.io.Serializable;
 import java.util.Arrays;
 import java.util.List;
 
-public class Player  {
-	public static final List<String> pointsDescription = Arrays.asList("love", "fifteen", "thirty", "forty");
-	private int score;
-    public int getScore() {
-        return score;
-    }
-    String name;
-    public String getName() {
-        return name;
-    }
+public class Player implements Serializable{
 
-    public void winBall() {
+	public static final List<String> pointsDescription = Arrays.asList("love", "fifteen", "thirty", "forty");
+	private String playerName;
+	private int score;
+	
+	public Player() { }
+	public Player(String playerName) { 
+		this.playerName = playerName;
+	}
+	
+	public String getPlayerName() {
+		return playerName;
+	}
+	public void setPlayerName(String playerName) {
+		this.playerName = playerName;
+	}
+
+	public int getScore() {
+		return score;
+	}
+	public void setScore(int score) {
+		this.score = score;
+	}
+	
+	public void winBall() {
         this.score = this.score + 1;
     }
-
-    public Player(String name) {
-        this.name = name;
-    }
-
-    public String getScoreDescription(){
+	
+	public String getScoreDescription(){
         return pointsDescription.get(score);
     }
-
-	
-
-	
 	
 }
