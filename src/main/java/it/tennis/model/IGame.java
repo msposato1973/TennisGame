@@ -7,7 +7,7 @@ public interface IGame {
 	public String score() ;
 	public boolean isPlayerOneWinner();
 	
-	public String playerWins(String playerName) ;
+	public String playerWins(Player player) ;
 	public boolean isPlayerTwoWinner() ;
 
 	public boolean hasPlayerOneAdvantage();

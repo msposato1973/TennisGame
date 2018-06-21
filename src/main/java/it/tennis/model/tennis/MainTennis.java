@@ -6,9 +6,18 @@ import it.tennis.model.Game;
 import it.tennis.model.IGame;
 import it.tennis.model.Player;
  
-
+/***
+ * 
+ * @author maxp
+ *
+ */
 public class MainTennis {
 	
+	
+	/***
+	 * 
+	 * @param args
+	 */
 	public static void main (String[] args){
 		
 		Scanner scanner = new Scanner(System.in);

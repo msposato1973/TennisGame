@@ -5,6 +5,12 @@ import java.util.Map;
 
 import it.tennis.util.Constant;
 
+
+/**
+ * 
+ * @author maxp
+ *
+ */
 public class Game implements IGame{
 	
 	private static final Map<Integer, String> SCORE_NAMES = new HashMap<>();
@@ -26,6 +32,12 @@ public class Game implements IGame{
     private int playerOneScore = 0;
     private int playerTwoScore = 0;
 
+    /**
+     * Costructor
+     * 
+     * @param player1
+     * @param player2
+     */
     public Game(Player player1, Player player2) {
     	
     	this.player1 = player1;
@@ -40,6 +52,7 @@ public class Game implements IGame{
         
     }
 
+    
     public void playerOneScores() {
     	playerOneScore++;
      	this.player1.setScore(playerOneScore);
@@ -53,9 +66,9 @@ public class Game implements IGame{
     public String score() {
         String score;
         if (isPlayerOneWinner()) {
-            score = playerWins(PLAYER_ONE_NAME);
+            score = playerWins(player1);
         } else if (isPlayerTwoWinner()) {
-            score = playerWins(PLAYER_TWO_NAME);
+            score = playerWins(player2);
         } else if (hasPlayerOneAdvantage()) {
             score = hasPlayerAdvantage(PLAYER_ONE_NAME);
         } else if (hasPlayerTwoAdvantage()) {
@@ -72,8 +85,8 @@ public class Game implements IGame{
         return playerOneScore > playerTwoScore + 1 && playerOneScore > Constant.TREE;
     }
 
-    public String playerWins(String playerName) {
-        return playerName + Constant.WIN;
+    public String playerWins(Player player) {
+        return player.getPlayerName() + Constant.WIN;
     }
 
     public boolean isPlayerTwoWinner() {
