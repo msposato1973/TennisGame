@@ -1,7 +1,7 @@
 # TennisGame
   Implement ation a simple tennis game
   
-  WWW.YNAP.COM
+
 NOTICE: The information contained in this message is confidential, intended only for the use of the individual or entity name
 d above. 
 If you are not the intended recipient please notify us immediately by telephone or e mail and destroy this message and an y associated documents. 
