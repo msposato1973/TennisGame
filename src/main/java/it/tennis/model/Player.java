@@ -5,7 +5,14 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Player implements Serializable{
+	
+	
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
 	public static final List<String> pointsDescription = Arrays.asList("love", "fifteen", "thirty", "forty");
 	private String playerName;
 	private int score;
